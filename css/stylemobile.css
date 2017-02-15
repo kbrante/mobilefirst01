@@ -9,12 +9,9 @@ header {
     width: 95%;
     margin: 0 auto;
 }
-nav {
-
-}
 img {
     align-self: center;
-
+    margin: 2em 0;
 }
 header ul {
     display: flex;
@@ -22,24 +19,72 @@ header ul {
     padding: 2em 1em;
     border-top: 1px solid lightgrey;
     border-bottom: 1px solid lightgrey;
-
-
-
 }
 header li {
     list-style: none;
     margin: 0 1em;
 }
+h2,
+h3,
+p {
+    margin-top: 2em;
+}
 footer {
     display: flex;
     justify-content: space-around;
-
-
 }
 footer ul {
     flex-direction: column;
-
+    margin: 2em 0;
 }
 footer li {
     list-style: none;
+    text-align: center;
+}
+a {
+    color: #2d90ff;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        display: flex;
+    }
+    header {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex: 1;
+    }
+    img {
+        align-self: flex-start;
+    }
+    header ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+        margin-left: 1em;
+    }
+    header li:nth-last-of-type(n+2) {
+        margin-bottom: 1em;
+        align-items: flex-end;
+    }
+    main {
+        flex: 3;
+    }
+    footer {
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-left: 2em;
+    }
+    footer li:not(:first-child) {
+        list-style: initial;
+        text-align: left;
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+    footer li:first-child {
+        text-align: left;
+        font-weight: bold;
+    }
 }
