@@ -34,6 +34,7 @@ footer {
     justify-content: space-around;
 }
 footer ul {
+    display: flex;
     flex-direction: column;
     margin: 2em 0;
 }
@@ -44,6 +45,15 @@ footer li {
 a {
     color: #2d90ff;
     text-decoration: none;
+}
+#yolo li:nth-child(2){
+    order: 2;
+}
+#yolo li:nth-child(3){
+    order: 1;
+}
+#yolo li:nth-child(5){
+    order: 3;
 }
 
 @media screen and (min-width: 400px) {
